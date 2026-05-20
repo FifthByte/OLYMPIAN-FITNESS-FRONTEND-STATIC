@@ -30,20 +30,6 @@ const items = [
     after: "linear-gradient(135deg,#4ad1b8,#1a3a3a)",
     h: "short",
   },
-  {
-    name: "Jonas L.",
-    weeks: 32,
-    before: "linear-gradient(135deg,#3a2a3a,#1a0a1a)",
-    after: "linear-gradient(135deg,#b84a8e,#3a1a2a)",
-    h: "short",
-  },
-  {
-    name: "Iris W.",
-    weeks: 18,
-    before: "linear-gradient(135deg,#2a3a2a,#0a1a0a)",
-    after: "linear-gradient(135deg,#9ec94a,#3a4a1a)",
-    h: "tall",
-  },
 ];
 
 function Card({ item, i }: { item: (typeof items)[number]; i: number }) {

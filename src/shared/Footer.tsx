@@ -23,8 +23,8 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-5 max-w-xs text-sm text-muted-foreground">
-              A cinematic training experience for athletes who refuse the
-              ordinary.
+              Train with purpose, push beyond your limits, and unlock your full
+              potential at Olympian Fitness
             </p>
             <div className="mt-6 flex gap-2">
               {[Instagram, Twitter, Youtube, Facebook].map((Icon, k) => (
@@ -65,10 +65,10 @@ export function Footer() {
               Visit
             </div>
             <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
-              <li>42 Athena Boulevard</li>
-              <li>Downtown District</li>
-              <li>Mon–Sun · 24/7</li>
-              <li className="text-foreground">+1 (555) 012-9876</li>
+              <li>Balussery</li>
+              <li>673612</li>
+              <li>Calicut, Kerala</li>
+              <li className="text-foreground">+91 9961269035</li>
             </ul>
           </div>
 

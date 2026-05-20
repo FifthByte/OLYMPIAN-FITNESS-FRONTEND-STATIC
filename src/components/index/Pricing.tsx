@@ -5,8 +5,8 @@ import { Check } from "lucide-react";
 const plans = [
   {
     name: "Starter",
-    monthly: 49,
-    yearly: 39,
+    monthly: 8000,
+    yearly: 7000,
     desc: "Full gym access with the essentials.",
     features: [
       "Unlimited gym access",
@@ -18,8 +18,8 @@ const plans = [
   },
   {
     name: "Elite",
-    monthly: 119,
-    yearly: 99,
+    monthly: 1000,
+    yearly: 9000,
     desc: "Our most popular plan for serious athletes.",
     features: [
       "Everything in Starter",
@@ -32,8 +32,8 @@ const plans = [
   },
   {
     name: "Olympian",
-    monthly: 249,
-    yearly: 209,
+    monthly: 1500,
+    yearly: 1200,
     desc: "White-glove coaching, no compromises.",
     features: [
       "Everything in Elite",
@@ -50,7 +50,7 @@ export function Pricing() {
   const [yearly, setYearly] = useState(false);
   return (
     <section id="pricing" className="relative py-32">
-      <div className="pointer-events-none absolute left-1/2 top-20 h-[400px] w-[600px] -translate-x-1/2 rounded-full bg-primary/10 blur-[120px]" />
+      <div className="pointer-events-none absolute left-1/2 top-20 h-[400px] w-[90vw] max-w-[600px] -translate-x-1/2 rounded-full bg-primary/10 blur-[80px] md:blur-[120px]" />{" "}
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="text-center">
           <motion.div
@@ -137,7 +137,7 @@ export function Pricing() {
                     transition={{ duration: 0.25 }}
                     className="font-display text-6xl font-bold"
                   >
-                    ${yearly ? p.yearly : p.monthly}
+                    ₹{yearly ? p.yearly : p.monthly}
                   </motion.span>
                 </AnimatePresence>
                 <span className="text-sm text-muted-foreground">/mo</span>

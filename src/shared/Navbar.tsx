@@ -120,9 +120,9 @@ export function Navbar() {
       {/* Mobile menu */}
       <motion.div
         initial={false}
-        animate={open ? { x: 0 } : { x: "100%" }}
+        animate={open ? { translateX: 0 } : { translateX: "100%" }}
         transition={{ type: "spring", damping: 28, stiffness: 240 }}
-        className="fixed inset-0 z-70 flex flex-col bg-background/95 backdrop-blur-xl md:hidden"
+        className="fixed inset-0 overflow-x-hidden z-70 flex flex-col bg-background/95 backdrop-blur-xl md:hidden"
       >
         <div className="flex items-center justify-between px-6 py-5">
           <span className="font-display text-lg font-bold">

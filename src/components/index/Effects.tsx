@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Loader from "../ui/Loader";
 
 export function CursorGlow() {
   const [pos, setPos] = useState({ x: -200, y: -200 });
@@ -13,6 +14,7 @@ export function CursorGlow() {
   }, []);
 
   if (!enabled) return null;
+
   return (
     <div
       aria-hidden
@@ -40,23 +42,7 @@ export function LoadingScreen() {
           transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
           className="fixed inset-0 z-200 grid place-items-center bg-background"
         >
-          <div className="flex flex-col items-center gap-6">
-            <motion.div
-              animate={{ rotate: 360 }}
-              transition={{ duration: 1.4, repeat: Infinity, ease: "linear" }}
-              className="relative h-16 w-16"
-            >
-              <div className="absolute inset-0 rounded-full border-2 border-transparent border-t-primary border-r-gold" />
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="font-display text-sm uppercase tracking-[0.4em] text-muted-foreground"
-            >
-              Olympian
-            </motion.div>
-          </div>
+          <Loader size="md" text="Olympian" />
         </motion.div>
       )}
     </AnimatePresence>

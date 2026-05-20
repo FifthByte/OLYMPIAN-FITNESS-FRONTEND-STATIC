@@ -28,7 +28,7 @@ export function Hero() {
       <div className="pointer-events-none absolute -right-32 bottom-10 h-[450px] w-[450px] rounded-full bg-gold/15 blur-[140px] animate-float-slow" />
 
       <div className="relative mx-auto max-w-7xl px-6 pb-32 pt-16">
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -36,7 +36,7 @@ export function Hero() {
         >
           <span className="h-1.5 w-1.5 rounded-full bg-neon animate-pulse" />
           Class of 2026 — Now Open
-        </motion.div>
+        </motion.div> */}
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -48,7 +48,7 @@ export function Hero() {
           <span className="text-gradient">Ultimate Physique</span>
         </motion.h1>
 
-        <motion.p
+        {/* <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -56,7 +56,7 @@ export function Hero() {
         >
           A cinematic training experience engineered for athletes who refuse the
           ordinary. Elite coaching, intelligent programming, no shortcuts.
-        </motion.p>
+        </motion.p> */}
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -110,8 +110,9 @@ export function Hero() {
 
       {/* Marquee */}
       <div className="absolute bottom-0 left-0 right-0 border-t border-border/40 bg-background/40 backdrop-blur-sm">
-        <div className="flex overflow-hidden py-4">
-          <div className="flex shrink-0 animate-marquee gap-12 whitespace-nowrap px-6 font-display text-sm uppercase tracking-[0.3em] text-muted-foreground">
+        <div className="relative w-full overflow-hidden py-4">
+          {" "}
+          <div className="flex min-w-max shrink-0 animate-marquee gap-12 whitespace-nowrap px-6 font-display text-sm uppercase tracking-[0.3em] text-muted-foreground">
             {Array.from({ length: 2 }).map((_, k) => (
               <div key={k} className="flex gap-12">
                 {[

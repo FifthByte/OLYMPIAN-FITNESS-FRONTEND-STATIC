@@ -5,6 +5,8 @@ import { lazy, Suspense } from "react";
 
 import { Navbar } from "./shared/Navbar";
 import { Footer } from "./shared/Footer";
+import Loader from "./components/ui/Loader";
+import { CursorGlow, LoadingScreen } from "./components/index/Effects";
 
 const Index = lazy(() => import("./pages/Index"));
 const ContactPage = lazy(() => import("./pages/ContactPage"));
@@ -12,9 +14,11 @@ const ContactPage = lazy(() => import("./pages/ContactPage"));
 function App() {
   return (
     <>
+      <LoadingScreen />
+      <CursorGlow />
       <BrowserRouter>
         <Navbar />
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/contact" element={<ContactPage />} />
