@@ -98,7 +98,7 @@ export function About() {
                 key={s.l}
                 className="rounded-2xl border border-border/60 bg-surface/50 p-5"
               >
-                <div className="font-display text-4xl font-bold text-gradient">
+                <div className="font-display md:text-4xl text-2xl font-bold text-gradient">
                   <Counter to={s.v} suffix={s.s} />
                 </div>
                 <div className="mt-1 text-xs uppercase tracking-widest text-muted-foreground">

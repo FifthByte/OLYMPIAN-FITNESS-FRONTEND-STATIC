@@ -28,7 +28,7 @@ export function BMI() {
   const pct = Math.max(0, Math.min(100, ((bmi - 14) / (36 - 14)) * 100));
 
   return (
-    <section className="relative py-32">
+    <section className="relative py-12 md:py-24">
       <div className="mx-auto max-w-6xl px-6">
         <div className="relative overflow-hidden rounded-4xl border border-border/60 bg-surface/40 p-8 sm:p-14">
           <div className="pointer-events-none absolute -left-20 top-0 h-80 w-80 rounded-full bg-primary/15 blur-3xl" />

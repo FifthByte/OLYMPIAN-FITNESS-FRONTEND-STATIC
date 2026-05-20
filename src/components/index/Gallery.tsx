@@ -53,9 +53,7 @@ function Card({ item, i }: { item: (typeof items)[number]; i: number }) {
       ref={ref}
       onMouseMove={(e) => handleMove(e.clientX)}
       onTouchMove={(e) => handleMove(e.touches[0].clientX)}
-      className={`group relative overflow-hidden rounded-3xl  border border-border/60 ${
-        item.h === "tall" ? " aspect-4/5" : "aspect-4/5"
-      }`}
+      className={`group relative aspect-4/5 w-[280px] min-w-[280px] overflow-hidden rounded-3xl border border-border/60 lg:w-full lg:min-w-0`}
     >
       <div className="absolute inset-0" style={{ background: item.before }} />
       <div
@@ -110,7 +108,8 @@ export function Gallery() {
           </p>
         </div>
 
-        <div className="mt-12 grid ] grid-cols-2 gap-5  lg:grid-cols-4">
+        <div className="mt-12 flex gap-5 overflow-x-auto pb-4 lg:grid lg:grid-cols-4 lg:overflow-visible">
+          {" "}
           {items.map((it, i) => (
             <Card key={it.name} item={it} i={i} />
           ))}
