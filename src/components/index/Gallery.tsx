@@ -53,8 +53,8 @@ function Card({ item, i }: { item: (typeof items)[number]; i: number }) {
       ref={ref}
       onMouseMove={(e) => handleMove(e.clientX)}
       onTouchMove={(e) => handleMove(e.touches[0].clientX)}
-      className={`group relative overflow-hidden rounded-3xl border border-border/60 ${
-        item.h === "tall" ? "row-span-2 aspect-3/5" : "aspect-4/5"
+      className={`group relative overflow-hidden rounded-3xl  border border-border/60 ${
+        item.h === "tall" ? " aspect-4/5" : "aspect-4/5"
       }`}
     >
       <div className="absolute inset-0" style={{ background: item.before }} />
@@ -90,7 +90,7 @@ function Card({ item, i }: { item: (typeof items)[number]; i: number }) {
 
 export function Gallery() {
   return (
-    <section id="gallery" className="relative py-32">
+    <section id="gallery" className="relative py-10 md:py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
           <motion.div
@@ -110,7 +110,7 @@ export function Gallery() {
           </p>
         </div>
 
-        <div className="mt-12 grid auto-rows-[12rem] grid-cols-2 gap-5 sm:auto-rows-[14rem] lg:grid-cols-4">
+        <div className="mt-12 grid ] grid-cols-2 gap-5  lg:grid-cols-4">
           {items.map((it, i) => (
             <Card key={it.name} item={it} i={i} />
           ))}

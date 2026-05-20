@@ -34,7 +34,7 @@ export function Testimonials() {
   const r = reviews[i];
 
   return (
-    <section className="relative py-32">
+    <section className="relative py-10 md:py-20">
       <div className="mx-auto max-w-5xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

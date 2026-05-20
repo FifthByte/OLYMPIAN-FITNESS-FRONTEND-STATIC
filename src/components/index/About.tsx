@@ -1,7 +1,6 @@
 import { motion, useInView, animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
-
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
@@ -25,7 +24,7 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
 
 export function About() {
   return (
-    <section id="about" className="relative py-32">
+    <section id="about" className="relative pt-32 pb-10">
       <div className="pointer-events-none absolute left-1/2 top-0 h-px w-1/2 -translate-x-1/2 bg-linear-to-r from-transparent via-primary/40 to-transparent" />
       <div className="mx-auto grid max-w-7xl items-center gap-16 px-6 lg:grid-cols-2">
         <motion.div
@@ -69,8 +68,8 @@ export function About() {
               About Olympian
             </div>
             <h2 className="mt-4 font-display text-4xl font-bold tracking-tight sm:text-5xl">
-              Not a gym.
-              <br />A <span className="text-gradient">proving ground.</span>
+              Built for
+              <br /> <span className="text-gradient">Greatness</span>
             </h2>
             <p className="mt-6 max-w-lg text-muted-foreground">
               We built Olympian for the obsessed. The athletes who treat

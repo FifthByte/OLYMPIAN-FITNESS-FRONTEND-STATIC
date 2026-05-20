@@ -20,7 +20,7 @@ const trainers = [
 
 export function Trainers() {
   return (
-    <section id="trainers" className="relative py-32">
+    <section id="trainers" className="relative py-10 md:py-16">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,7 @@ export function Trainers() {
                 height={1024}
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-linear-to-t from-background via-background/30 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-background via-background/10 to-transparent" />
 
               <div className="absolute right-4 top-4 rounded-full glass px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-primary">
                 {t.tag}

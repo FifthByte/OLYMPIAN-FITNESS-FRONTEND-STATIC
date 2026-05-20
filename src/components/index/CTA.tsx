@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export function CTA() {
   return (
-    <section className="relative py-32">
+    <section className="relative py-10 md:py-20">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

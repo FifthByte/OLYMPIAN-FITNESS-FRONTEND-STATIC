@@ -49,7 +49,7 @@ const plans = [
 export function Pricing() {
   const [yearly, setYearly] = useState(false);
   return (
-    <section id="pricing" className="relative py-32">
+    <section id="pricing" className="relative py-10 md:py-20">
       <div className="pointer-events-none absolute left-1/2 top-20 h-[400px] w-[90vw] max-w-[600px] -translate-x-1/2 rounded-full bg-primary/10 blur-[80px] md:blur-[120px]" />{" "}
       <div className="relative mx-auto max-w-7xl px-6">
         <div className="text-center">
